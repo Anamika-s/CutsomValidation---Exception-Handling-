@@ -1,0 +1,53 @@
+﻿@model EFCodeWithValidation.Models.Employee
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@{ using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(false)
+        <div>
+            @Html.LabelFor(x => x.EmployeeCode)
+            @Html.EditorFor(x => x.EmployeeCode)
+            @Html.ValidationMessageFor(x => x.EmployeeCode)
+        </div>
+        <div>
+            @Html.LabelFor(x => x.EmployeeName)
+            @Html.EditorFor(x => x.EmployeeName)
+            @Html.ValidationMessageFor(x => x.EmployeeName)
+
+
+        </div>
+        <div>
+            @Html.LabelFor(x => x.Age)
+            @Html.EditorFor(x => x.Age)
+            @Html.ValidationMessageFor(x => x.Age)
+
+
+        </div>
+
+        <div>
+            @Html.LabelFor(x => x.Department)
+            @Html.EditorFor(x => x.Department)
+            @Html.ValidationMessageFor(x => x.Department)
+
+        </div>
+        <div>
+            @Html.LabelFor(x => x.Salary)
+            @Html.EditorFor(x => x.Salary)
+            @Html.ValidationMessageFor(x => x.Salary)
+
+        </div>
+        <div>
+            @Html.LabelFor(x => x.JoiningDate)
+            @Html.EditorFor(x => x.JoiningDate)
+            @Html.ValidationMessageFor(x => x.JoiningDate)
+
+        </div>
+        <button type="submit"> Create </button>
+
+    }
+}
+
